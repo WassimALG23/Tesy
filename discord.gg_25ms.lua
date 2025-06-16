@@ -1,5 +1,13 @@
-local Fluent = loadstring(game:HttpGet("https://raw.githubusercontent.com/WassimALG23/Testij/refs/heads/main/main.lua"))()
+local fluent = game:HttpGet("https://raw.githubusercontent.com/WassimALG23/Testij/refs/heads/main/main.lua")
+print("Downloaded code:\n", code)
 
+local func, err = loadstring(code)
+
+if func then
+    func()
+else
+    warn("loadstring failed with error: "..err)
+end
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/hungquan99/FluentUI/master/Addons/SaveManager.lua"))()
 
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/hungquan99/FluentUI/master/Addons/InterfaceManager.lua"))()
